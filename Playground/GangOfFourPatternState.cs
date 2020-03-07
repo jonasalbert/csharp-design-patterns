@@ -96,7 +96,6 @@ namespace Playground
     /// </remarks>
     /// </summary>
     class SilverState : State
-
     {
         // Overloaded constructors
 
