@@ -97,9 +97,8 @@ namespace Playground
     /// </summary>
     class SilverState : State
     {
+        // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-constructors
         // Overloaded constructors
-
-
         public SilverState(State state) :
           this(state.Balance, state.Account)
         {
@@ -115,7 +114,6 @@ namespace Playground
         private void Initialize()
         {
             // Should come from a datasource
-
             interest = 0.0;
             lowerLimit = 0.0;
             upperLimit = 1000.0;
@@ -161,8 +159,8 @@ namespace Playground
     /// </summary>
     class GoldState : State
     {
+        // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-constructors
         // Overloaded constructors
-
         public GoldState(State state)
           : this(state.Balance, state.Account)
         {
