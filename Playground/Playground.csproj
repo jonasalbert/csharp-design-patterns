@@ -5,5 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pattern-State\Pattern-State.csproj" />
+  </ItemGroup>
+
 
 </Project>

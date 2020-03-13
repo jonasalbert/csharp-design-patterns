@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+
+using Pattern_State;
 
 namespace Playground
 {
@@ -46,7 +49,7 @@ namespace Playground
             Console.WriteLine("      Samples - State Pattern");
             Console.WriteLine("**********************************");
             Console.WriteLine("1. Bank Transaction");
-            Console.WriteLine("2. ");
+            Console.WriteLine("2. Prime - Approval Hierarchy");
             Console.WriteLine("**********************************");
             Console.Write("select a sample: ");
             int menu = int.Parse(Console.ReadLine());
@@ -71,6 +74,19 @@ namespace Playground
         }
         private static void statePatternSamplePrimeApprovalHierarchy()
         {
+            Console.Clear();
+
+            List<ModelApprover> list = DataApprover.Instance.DataSource.ConvertAll(
+                x => new ModelApprover { Action = x.Action, Name = x.Name, Order = x.Order, Prime = x.Prime }
+            );
+
+            Approval approval = new Approval(210, list);
+            foreach(ModelApprover approver in DataApprover.Instance.DataSource)
+            {
+                approval.TakeAction(approver);
+            }
+            Console.ReadKey();
+            doMainMenu();
 
         }
 
