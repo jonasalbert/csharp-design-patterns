@@ -23,19 +23,35 @@ namespace Pattern_Flyweight
 
         public PayrollProcessFactory()
         {
-            _flyweights.Add(ennSteps.Attendance, new AttendanceFlyweight());
-            _flyweights.Add(ennSteps.Incentives, new IncentivesFlyweight());
-            _flyweights.Add(ennSteps.Leaves, new LeavesFlyweight());
-            _flyweights.Add(ennSteps.Premiums, new PremiumsFlyweight());
-            _flyweights.Add(ennSteps.GrossIncome, new GrossIncomeFlyweight());
-            _flyweights.Add(ennSteps.Tax, new TaxFlyweight());
-            _flyweights.Add(ennSteps.Net, new NetFlyweight());
-            _flyweights.Add(ennSteps.BankTransmittal, new BankTransmittalFlyweight());
+
         }
 
         public PayrollProcessFlyweight GetFlyweight(ennSteps steps)
         {
-            return (PayrollProcessFlyweight)_flyweights[steps];
+            if (_flyweights.ContainsKey(steps))
+                return (PayrollProcessFlyweight)_flyweights[steps];
+
+            PayrollProcessFlyweight f = null;
+
+            if (steps == ennSteps.Attendance)
+                f = new AttendanceFlyweight();
+            else if (steps == ennSteps.Incentives)
+                f = new IncentivesFlyweight();
+            else if (steps== ennSteps.Leaves)
+                f = new LeavesFlyweight();
+            else if (steps == ennSteps.Premiums) 
+                f = new PremiumsFlyweight();
+            else if (steps == ennSteps.GrossIncome) 
+                f = new GrossIncomeFlyweight();
+            else if (steps == ennSteps.Tax) 
+                f = new TaxFlyweight();
+            else if (steps == ennSteps.Net)
+                f = new NetFlyweight();
+            else if (steps == ennSteps.BankTransmittal)
+                f = new BankTransmittalFlyweight();
+
+            _flyweights.Add(steps, f);
+            return f;
         }
 
 

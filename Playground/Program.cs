@@ -144,10 +144,10 @@ namespace Playground
         {
             Console.Clear();
 
-            foreach(ModelApprover employee in DataApprover.Instance.List)
+            PayrollProcessFactory factory = new PayrollProcessFactory();
+            foreach (ModelApprover employee in DataApprover.Instance.List)
             {
                 Console.WriteLine("______________________________________________________________");
-                PayrollProcessFactory factory = new PayrollProcessFactory();
 
                 PayrollProcessFlyweight attendance = factory.GetFlyweight(ennSteps.Attendance);
                 attendance.Process(employee.Name);
