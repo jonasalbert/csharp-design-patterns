@@ -9,7 +9,8 @@ namespace Pattern_State
         private State _state;
 
         public Approval(int primeFormula) 
-        {            
+        {
+            Console.WriteLine("Prime Formula: "+ primeFormula);
             _state = new StartedState(primeFormula, this);
             _state.PrimeFormulaOrig = primeFormula;
         }
