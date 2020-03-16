@@ -1,135 +1,61 @@
-﻿using System;
+﻿    using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Playground
 {
     /// <summary>
-
     /// The 'FlyweightFactory' class
-
     /// </summary>
-
-    class CharacterFactory
-
+    class FlyweightFactory
     {
-        private Dictionary<char, Character> _characters =
-          new Dictionary<char, Character>();
+        private Hashtable flyweights = new Hashtable();
 
-        public Character GetCharacter(char key)
+        // Constructor
+
+        public FlyweightFactory()
         {
-            // Uses "lazy initialization"
+            flyweights.Add("X", new ConcreteFlyweight());
+            flyweights.Add("Y", new ConcreteFlyweight());
+            flyweights.Add("Z", new ConcreteFlyweight());
+        }
 
-            Character character = null;
-            if (_characters.ContainsKey(key))
-            {
-                character = _characters[key];
-            }
-            else
-
-            {
-                switch (key)
-                {
-                    case 'A': character = new CharacterA(); break;
-                    case 'B': character = new CharacterB(); break;
-                    //...
-
-                    case 'Z': character = new CharacterZ(); break;
-                }
-                _characters.Add(key, character);
-            }
-            return character;
+        public Flyweight GetFlyweight(string key)
+        {
+            return ((Flyweight)flyweights[key]);
         }
     }
 
     /// <summary>
     /// The 'Flyweight' abstract class
     /// </summary>
-    abstract class Character
-
+    abstract class Flyweight
     {
-        protected char symbol;
-        protected int width;
-        protected int height;
-        protected int ascent;
-        protected int descent;
-        protected int pointSize;
-
-        public abstract void Display(int pointSize);
+        public abstract void Operation(int extrinsicstate);
     }
 
     /// <summary>
-    /// A 'ConcreteFlyweight' class
+    /// The 'ConcreteFlyweight' class
     /// </summary>
-    class CharacterA : Character
-
+    class ConcreteFlyweight : Flyweight
     {
-        // Constructor
-        public CharacterA()
+        public override void Operation(int extrinsicstate)
         {
-            this.symbol = 'A';
-            this.height = 100;
-            this.width = 120;
-            this.ascent = 70;
-            this.descent = 0;
-        }
-
-        public override void Display(int pointSize)
-        {
-            this.pointSize = pointSize;
-            Console.WriteLine(this.symbol +
-              " (pointsize " + this.pointSize + ")");
+            Console.WriteLine("ConcreteFlyweight: " + extrinsicstate);
         }
     }
 
     /// <summary>
-    /// A 'ConcreteFlyweight' class
+    /// The 'UnsharedConcreteFlyweight' class
     /// </summary>
-    class CharacterB : Character
+    class UnsharedConcreteFlyweight : Flyweight
 
     {
-        // Constructor
-
-        public CharacterB()
+        public override void Operation(int extrinsicstate)
         {
-            this.symbol = 'B';
-            this.height = 100;
-            this.width = 140;
-            this.ascent = 72;
-            this.descent = 0;
-        }
-
-        public override void Display(int pointSize)
-        {
-            this.pointSize = pointSize;
-            Console.WriteLine(this.symbol +
-              " (pointsize " + this.pointSize + ")");
-        }
-
-    }
-
-    // ... C, D, E, etc.
-    /// <summary>
-    /// A 'ConcreteFlyweight' class
-    /// </summary>
-    class CharacterZ : Character
-
-    {
-        // Constructor
-        public CharacterZ()
-        {
-            this.symbol = 'Z';
-            this.height = 100;
-            this.width = 100;
-            this.ascent = 68;
-            this.descent = 0;
-        }
-
-        public override void Display(int pointSize)
-        {
-            this.pointSize = pointSize;
-            Console.WriteLine(this.symbol +
-              " (pointsize " + this.pointSize + ")");
+            Console.WriteLine("UnsharedConcreteFlyweight: " +
+              extrinsicstate);
         }
     }
 

@@ -1,59 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Playground.CharacterFactory">
-    <Position X="0.75" Y="1" Width="1.5" />
+  <Class Name="Playground.FlyweightFactory">
+    <Position X="0.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>GangOfFourPatternFlyweight.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Playground.Character">
-    <Position X="2.75" Y="1" Width="1.5" />
+  <Class Name="Playground.Flyweight">
+    <Position X="2.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAIBAAAAAAAAAQAQAAAAQAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>GangOfFourPatternFlyweight.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Playground.CharacterA">
-    <Position X="4.5" Y="1" Width="1.5" />
-    <InheritanceLine Type="Playground.Character" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="Playground.ConcreteFlyweight">
+    <Position X="4.5" Y="1.25" Width="1.75" />
+    <InheritanceLine Type="Playground.Flyweight" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.25" Y="2.812" />
-        <Point X="5.188" Y="2.812" />
-        <Point X="5.188" Y="2.425" />
+        <Point X="3.125" Y="2.353" />
+        <Point X="3.125" Y="2.858" />
+        <Point X="5.375" Y="2.858" />
+        <Point X="5.375" Y="2.483" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>GangOfFourPatternFlyweight.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Playground.CharacterB">
-    <Position X="6.25" Y="1" Width="1.5" />
-    <InheritanceLine Type="Playground.Character" FixedFromPoint="true" FixedToPoint="true">
+  <Class Name="Playground.UnsharedConcreteFlyweight">
+    <Position X="6.5" Y="1.25" Width="2.25" />
+    <InheritanceLine Type="Playground.Flyweight" FixedFromPoint="true">
       <Path>
-        <Point X="4.25" Y="2.812" />
-        <Point X="6.938" Y="2.812" />
-        <Point X="6.938" Y="2.425" />
+        <Point X="3.125" Y="2.353" />
+        <Point X="3.125" Y="2.858" />
+        <Point X="7.625" Y="2.858" />
+        <Point X="7.625" Y="2.483" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GangOfFourPatternFlyweight.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Playground.CharacterZ">
-    <Position X="8" Y="1" Width="1.5" />
-    <InheritanceLine Type="Playground.Character" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4.25" Y="2.812" />
-        <Point X="8.825" Y="2.812" />
-        <Point X="8.825" Y="2.425" />
-        <Point X="8.75" Y="2.425" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>GangOfFourPatternFlyweight.cs</FileName>
     </TypeIdentifier>
   </Class>

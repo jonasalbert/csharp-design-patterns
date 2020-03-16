@@ -5,8 +5,4 @@
     <RootNamespace>Pattern_Flyweight</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Uml\" />
-  </ItemGroup>
-
 </Project>

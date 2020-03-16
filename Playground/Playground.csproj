@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pattern-Flyweight\Pattern-Flyweight.csproj" />
     <ProjectReference Include="..\Pattern-State\Pattern-State.csproj" />
   </ItemGroup>
 

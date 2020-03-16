@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Pattern_Flyweight.PayrollProcessFactory">
+    <Position X="0.5" Y="2" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="Pattern_Flyweight.PayrollProcessFactory.ennSteps">
+        <TypeIdentifier>
+          <NewMemberFileName>PayrollProcessFactory.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>PayrollProcessFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.PayrollProcessFlyweight">
+    <Position X="2.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PayrollProcessFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.AttendanceFlyweight">
+    <Position X="5.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AttendanceFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.IncentivesFlyweight">
+    <Position X="7.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IncentivesFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.LeavesFlyweight">
+    <Position X="10" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LeavesFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.BankTransmittalFlyweight">
+    <Position X="7.75" Y="6" Width="2" />
+    <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.353" />
+        <Point X="3.75" Y="7.608" />
+        <Point X="8.75" Y="7.608" />
+        <Point X="8.75" Y="7.233" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BankTransmittalFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.GrossIncomeFlyweight">
+    <Position X="7.75" Y="4.25" Width="2" />
+    <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.353" />
+        <Point X="3.75" Y="5.783" />
+        <Point X="8.75" Y="5.783" />
+        <Point X="8.75" Y="5.483" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GrossIncomeFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.PremiumsFlyweight">
+    <Position X="5.5" Y="4.25" Width="2" />
+    <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.353" />
+        <Point X="3.75" Y="5.783" />
+        <Point X="6.5" Y="5.783" />
+        <Point X="6.5" Y="5.483" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PremiumsFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.TaxFlyweight">
+    <Position X="10" Y="4.25" Width="2" />
+    <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.353" />
+        <Point X="3.75" Y="5.783" />
+        <Point X="11" Y="5.783" />
+        <Point X="11" Y="5.483" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TaxFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Flyweight.NetFlyweight">
+    <Position X="5.5" Y="6" Width="2" />
+    <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.353" />
+        <Point X="3.75" Y="7.608" />
+        <Point X="6.5" Y="7.608" />
+        <Point X="6.5" Y="7.233" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NetFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Pattern_Flyweight;
 using Pattern_State;
+using static Pattern_Flyweight.PayrollProcessFactory;
 
 namespace Playground
 {
@@ -34,7 +35,7 @@ namespace Playground
                     Environment.Exit(0);
                     break;
                 case 1:
-                    doStatePattern();
+                    doStatePattern();   
                     break;
                 case 2:
                     doFlyweightPattern();
@@ -103,44 +104,77 @@ namespace Playground
             Console.WriteLine("**********************************");
             Console.WriteLine("      Samples - Flyweight Pattern");
             Console.WriteLine("**********************************");
-            Console.WriteLine("1. Character Factory");
-            Console.WriteLine("2. ");
+            Console.WriteLine("1. Simple Operation");
+            Console.WriteLine("2. Payroll Process");
             Console.WriteLine("**********************************");
             Console.Write("select a sample: ");
             int menu = int.Parse(Console.ReadLine());
 
-            if (menu.Equals(1)) flyweightPatternCharacterFactory();
-            else if (menu.Equals(2)) flyweightPattern();
+            if (menu.Equals(1)) flyweightPatternSimpleOperation();
+            else if (menu.Equals(2)) flyweightPatternPayrollProcess();
         }
-        private static void flyweightPatternCharacterFactory()
+        private static void flyweightPatternSimpleOperation()
         {
             Console.Clear();
 
-            // Build a document with text
-            string document = "AAZZBBZB";
-            char[] chars = document.ToCharArray();
+            // Arbitrary extrinsic state
+            int extrinsicstate = 22;
 
-            CharacterFactory factory = new CharacterFactory();
+            FlyweightFactory factory = new FlyweightFactory();
 
-            // extrinsic state
-            int pointSize = 10;
+            // Work with different flyweight instances
+            Flyweight fx = factory.GetFlyweight("X");
+            fx.Operation(--extrinsicstate);
 
-            // For each character use a flyweight object
-            foreach (char c in chars)
-            {
-                pointSize++;
-                Character character = factory.GetCharacter(c);
-                character.Display(pointSize);
-            }
+            Flyweight fy = factory.GetFlyweight("Y");
+            fy.Operation(--extrinsicstate);
+
+            Flyweight fz = factory.GetFlyweight("Z");
+            fz.Operation(--extrinsicstate);
+
+            UnsharedConcreteFlyweight fu = new
+              UnsharedConcreteFlyweight();
+
+            fu.Operation(--extrinsicstate);
 
             Console.ReadKey();
             doMainMenu();
         }
-        private static void flyweightPattern()
+        private static void flyweightPatternPayrollProcess()
         {
             Console.Clear();
 
+            foreach(ModelApprover employee in DataApprover.Instance.List)
+            {
+                Console.WriteLine("______________________________________________________________");
+                PayrollProcessFactory factory = new PayrollProcessFactory();
 
+                PayrollProcessFlyweight attendance = factory.GetFlyweight(ennSteps.Attendance);
+                attendance.Process(employee.Name);
+
+                PayrollProcessFlyweight incentives = factory.GetFlyweight(ennSteps.Incentives);
+                incentives.Process(employee.Name);
+
+                PayrollProcessFlyweight leaves = factory.GetFlyweight(ennSteps.Leaves);
+                leaves.Process(employee.Name);
+
+                PayrollProcessFlyweight premiums = factory.GetFlyweight(ennSteps.Premiums);
+                premiums.Process(employee.Name);
+
+                PayrollProcessFlyweight grossIncome = factory.GetFlyweight(ennSteps.GrossIncome);
+                grossIncome.Process(employee.Name);
+
+                PayrollProcessFlyweight tax = factory.GetFlyweight(ennSteps.Tax);
+                tax.Process(employee.Name);
+
+                PayrollProcessFlyweight net = factory.GetFlyweight(ennSteps.Net);
+                net.Process(employee.Name);
+
+                //break; // just process one employee as example.
+            }
+            Console.WriteLine("______________________________________________________________");
+            BankTransmittalFlyweight bankTransmittal = new BankTransmittalFlyweight();
+            bankTransmittal.Process("COMPANY_SALARY.txt");
 
             Console.ReadKey();
             doMainMenu();
