@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Playground.LibraryItem">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>GangOfFourPatternDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.Book">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Playground.LibraryItem" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="3.25" />
+        <Point X="5.688" Y="3.25" />
+        <Point X="5.688" Y="2.569" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.Video">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Playground.LibraryItem" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="3.25" />
+        <Point X="8.062" Y="3.25" />
+        <Point X="8.062" Y="2.761" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAIAQAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.Decorator" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.Borrowable" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

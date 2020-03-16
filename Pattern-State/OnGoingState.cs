@@ -22,6 +22,7 @@ namespace Pattern_State
             this.StateChangeCheck();
         }
 
+        //https://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/
         private List<int> ListOfApproversPrime(int primeFormula)
         {
             int n = primeFormula;

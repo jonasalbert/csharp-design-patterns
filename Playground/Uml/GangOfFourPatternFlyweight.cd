@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Playground.CharacterFactory">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.Character">
+    <Position X="2.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAIBAAAAAAAAAQAQAAAAQAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.CharacterA">
+    <Position X="4.5" Y="1" Width="1.5" />
+    <InheritanceLine Type="Playground.Character" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.812" />
+        <Point X="5.188" Y="2.812" />
+        <Point X="5.188" Y="2.425" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.CharacterB">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <InheritanceLine Type="Playground.Character" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.812" />
+        <Point X="6.938" Y="2.812" />
+        <Point X="6.938" Y="2.425" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Playground.CharacterZ">
+    <Position X="8" Y="1" Width="1.5" />
+    <InheritanceLine Type="Playground.Character" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.812" />
+        <Point X="8.825" Y="2.812" />
+        <Point X="8.825" Y="2.425" />
+        <Point X="8.75" Y="2.425" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GangOfFourPatternFlyweight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

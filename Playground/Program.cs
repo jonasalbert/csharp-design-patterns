@@ -7,35 +7,6 @@ namespace Playground
 {
     class Program
     {
-        // A function to print all prime  
-        // factors of a given number n 
-        // https://www.geeksforgeeks.org/print-all-prime-factors-of-a-given-number/
-        public static void primeFactors(int n)
-        {
-            // Print the number of 2s that divide n 
-            while (n % 2 == 0)
-            {
-                Console.Write(2 + " ");
-                n /= 2;
-            }
-
-            // n must be odd at this point. So we can 
-            // skip one element (Note i = i +2) 
-            for (int i = 3; i <= Math.Sqrt(n); i += 2)
-            {
-                // While i divides n, print i and divide n 
-                while (n % i == 0)
-                {
-                    Console.Write(i + " ");
-                    n /= i;
-                }
-            }
-
-            // This condition is to handle the case whien 
-            // n is a prime number greater than 2 
-            if (n > 2)
-                Console.Write(n);
-        }
         static void Main(string[] args)
         {
             doMainMenu();
@@ -65,12 +36,24 @@ namespace Playground
                 case 1:
                     doStatePattern();
                     break;
+                case 2:
+                    doFlyweightPattern();
+                    break;
+                case 3:
+                    doBridgePattern();
+                    break;
+                case 4:
+                    doDecoratorPattern();
+                    break;
                 default:
                     doMainMenu();
                     break;
             }
         }
 
+
+        //PATTERN: State
+        //________________________________________________________________________________
         private static void doStatePattern()
         {
             Console.Clear();
@@ -86,8 +69,6 @@ namespace Playground
             if (menu.Equals(1)) statePatternSampleBankTransaction();
             else if (menu.Equals(2)) statePatternSamplePrimeApprovalHierarchy();
         }
-
-
         private static void statePatternSampleBankTransaction()
         {
             Console.Clear();
@@ -114,11 +95,160 @@ namespace Playground
 
         }
 
+        //PATTERN: Flyweight
+        //________________________________________________________________________________
+        private static void doFlyweightPattern()
+        {
+            Console.Clear();
+            Console.WriteLine("**********************************");
+            Console.WriteLine("      Samples - Flyweight Pattern");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("1. Character Factory");
+            Console.WriteLine("2. ");
+            Console.WriteLine("**********************************");
+            Console.Write("select a sample: ");
+            int menu = int.Parse(Console.ReadLine());
+
+            if (menu.Equals(1)) flyweightPatternCharacterFactory();
+            else if (menu.Equals(2)) flyweightPattern();
+        }
+        private static void flyweightPatternCharacterFactory()
+        {
+            Console.Clear();
+
+            // Build a document with text
+            string document = "AAZZBBZB";
+            char[] chars = document.ToCharArray();
+
+            CharacterFactory factory = new CharacterFactory();
+
+            // extrinsic state
+            int pointSize = 10;
+
+            // For each character use a flyweight object
+            foreach (char c in chars)
+            {
+                pointSize++;
+                Character character = factory.GetCharacter(c);
+                character.Display(pointSize);
+            }
+
+            Console.ReadKey();
+            doMainMenu();
+        }
+        private static void flyweightPattern()
+        {
+            Console.Clear();
 
 
+
+            Console.ReadKey();
+            doMainMenu();
+        }
+
+        //PATTERN: Decorator
+        //________________________________________________________________________________
+        private static void doDecoratorPattern()
+        {
+            Console.Clear();
+            Console.WriteLine("**********************************");
+            Console.WriteLine("      Samples - Decorator Pattern");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("1. Library System");
+            Console.WriteLine("2. ");
+            Console.WriteLine("**********************************");
+            Console.Write("select a sample: ");
+            int menu = int.Parse(Console.ReadLine());
+
+            if (menu.Equals(1)) decoratorPatternLibrarySystem();
+            else if (menu.Equals(2)) decoratorPattern();
+        }
+        private static void decoratorPatternLibrarySystem()
+        {
+            Console.Clear();
+
+            // Create book
+            Book book = new Book("Worley", "Inside ASP.NET", 10);
+            book.Display();
+
+            // Create video
+            Video video = new Video("Spielberg", "Jaws", 23, 92);
+            video.Display();
+
+            // Make video borrowable, then borrow and display
+
+            Console.WriteLine("\nMaking video borrowable:");
+            Borrowable borrowvideo = new Borrowable(video);
+            borrowvideo.BorrowItem("Customer #1");
+            borrowvideo.BorrowItem("Customer #2");
+
+            borrowvideo.Display();
+
+            Console.ReadKey();
+            doMainMenu();
+        }
+        private static void decoratorPattern()
+        {
+            Console.Clear();
+
+
+
+            Console.ReadKey();
+            doMainMenu();
+        }
+
+        //PATTERN: Bridge
+        //________________________________________________________________________________
+        private static void doBridgePattern()
+        {
+            Console.Clear();
+            Console.WriteLine("**********************************");
+            Console.WriteLine("      Samples - Bridge Pattern");
+            Console.WriteLine("**********************************");
+            Console.WriteLine("1. Record Navigation");
+            Console.WriteLine("2. ");
+            Console.WriteLine("**********************************");
+            Console.Write("select a sample: ");
+            int menu = int.Parse(Console.ReadLine());
+
+            if (menu.Equals(1)) bridgePatternRecordNavigation();
+            else if (menu.Equals(2)) bridgePattern();
+        }
+        private static void bridgePatternRecordNavigation()
+        {
+            Console.Clear();
+
+            // Create RefinedAbstraction
+            Customers customers = new Customers("Chicago");
+
+            // Set ConcreteImplementor
+            customers.Data = new CustomersData();
+
+            // Exercise the bridge
+            customers.Show();
+            customers.Next();
+            customers.Show();
+            customers.Next();
+            customers.Show();
+            customers.Add("Henry Velasquez");
+
+            customers.ShowAll();
+
+            Console.ReadKey();
+            doMainMenu();
+        }
+        private static void bridgePattern()
+        {
+            Console.Clear();
+
+
+
+            Console.ReadKey();
+            doMainMenu();
+        }
 
     }
 
-    
+
 
 }
