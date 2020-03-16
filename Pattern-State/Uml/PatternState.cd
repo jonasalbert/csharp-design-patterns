@@ -3,47 +3,68 @@
   <Class Name="Pattern_State.Approval">
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Approval.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.State">
-    <Position X="2.5" Y="0.75" Width="1.5" />
+    <Position X="2.25" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>KAAAAAAAAAAEAAAAAAACAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>KQAAQAAAAAAEAAAAAAACAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.StartedState">
-    <Position X="5.25" Y="0.75" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="2" />
+    <InheritanceLine Type="Pattern_State.State" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.875" />
+        <Point X="5.25" Y="2.875" />
+        <Point X="5.25" Y="2.31" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAgQAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>StartedState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.OnGoingState">
-    <Position X="7" Y="0.75" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="2.25" />
+    <InheritanceLine Type="Pattern_State.State" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.875" />
+        <Point X="7.531" Y="2.875" />
+        <Point X="7.531" Y="2.502" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAgQAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>OnGoingState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.CompletedState">
-    <Position X="8.75" Y="0.75" Width="1.5" />
+    <Position X="9" Y="0.5" Width="2.5" />
+    <InheritanceLine Type="Pattern_State.State" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.875" />
+        <Point X="10.25" Y="2.875" />
+        <Point X="10.25" Y="2.502" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAgQAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>CompletedState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.ModelApprover">
-    <Position X="5.25" Y="3" Width="1.75" />
+    <Position X="5.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAEAIABCIAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAAAQ=</HashCode>
       <FileName>ModelApprover.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.DataApprover">
-    <Position X="7.25" Y="3" Width="1.75" />
+    <Position X="7.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAI=</HashCode>
       <FileName>DataApprover.cs</FileName>
