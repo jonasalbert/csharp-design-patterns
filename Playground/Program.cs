@@ -158,11 +158,11 @@ namespace Playground
                 PayrollProcessFlyweight leaves = factory.GetFlyweight(ennSteps.Leaves);
                 leaves.Process(employee.Name);
 
-                PayrollProcessFlyweight premiums = factory.GetFlyweight(ennSteps.Premiums);
-                premiums.Process(employee.Name);
-
                 PayrollProcessFlyweight grossIncome = factory.GetFlyweight(ennSteps.GrossIncome);
                 grossIncome.Process(employee.Name);
+
+                PayrollProcessFlyweight premiums = factory.GetFlyweight(ennSteps.Premiums);
+                premiums.Process(employee.Name);
 
                 PayrollProcessFlyweight tax = factory.GetFlyweight(ennSteps.Tax);
                 tax.Process(employee.Name);
@@ -170,7 +170,6 @@ namespace Playground
                 PayrollProcessFlyweight net = factory.GetFlyweight(ennSteps.Net);
                 net.Process(employee.Name);
 
-                //break; // just process one employee as example.
             }
             Console.WriteLine("______________________________________________________________");
             BankTransmittalFlyweight bankTransmittal = new BankTransmittalFlyweight();
