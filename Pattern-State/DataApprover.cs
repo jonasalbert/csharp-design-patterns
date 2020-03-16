@@ -7,7 +7,7 @@ namespace Pattern_State
     public class DataApprover
     {
         private static DataApprover _instance=null;
-        private List<ModelApprover> _dataSource = null;
+        private List<ModelApprover> _list = null;
         private DataApprover() { }
 
         public static DataApprover Instance
@@ -19,19 +19,19 @@ namespace Pattern_State
             }
         }
 
-        public List<ModelApprover> DataSource
+        public List<ModelApprover> List
         {
             get
             {
-                if (_dataSource == null)
+                if (_list == null)
                 {
-                    _dataSource = new List<ModelApprover>();
-                    _dataSource.Add(new ModelApprover() { Name = "", Prime = 2, Order = 1, Action = "Approve" });
-                    _dataSource.Add(new ModelApprover() { Name = "", Prime = 3, Order = 2, Action = "Approve" });
-                    _dataSource.Add(new ModelApprover() { Name = "", Prime = 5, Order = 3, Action = "Approve" });
-                    _dataSource.Add(new ModelApprover() { Name = "", Prime = 7, Order = 4, Action = "Approve" });
+                    _list = new List<ModelApprover>();
+                    _list.Add(new ModelApprover() { Name = "Ryan Dahl", Prime = 2, Order = 1, Action = "Approve" });
+                    _list.Add(new ModelApprover() { Name = "Yukihiro Matsumoto", Prime = 3, Order = 2, Action = "Approve" });
+                    _list.Add(new ModelApprover() { Name = "Guido Van Rossum", Prime = 5, Order = 3, Action = "Approve" });
+                    _list.Add(new ModelApprover() { Name = "Bjarne Stroustrup", Prime = 7, Order = 4, Action = "Approve" });
                 }
-                return _dataSource;
+                return _list;
             }
         }
 

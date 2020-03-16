@@ -7,12 +7,11 @@ namespace Pattern_State
     public class Approval
     {
         private State _state;
-        private static int _primeFormula = 1;
 
-        public Approval(int primeFormula, List<ModelApprover> approvers) 
+        public Approval(int primeFormula) 
         {            
             _state = new StartedState(primeFormula, this);
-            _state.Approvers = approvers;
+            _state.PrimeFormulaOrig = primeFormula;
         }
 
         public State State
@@ -24,6 +23,7 @@ namespace Pattern_State
         public void TakeAction(ModelApprover approver)
         {
             _state.TakeAction(approver);
+            Console.WriteLine("______________________________________");
             Console.WriteLine("Approver: " + approver.Name);
             Console.WriteLine("Approver's prime: " + approver.Prime);
             Console.WriteLine("Prime Formula: " + _state.PrimeFormula);
