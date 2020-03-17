@@ -61,13 +61,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_Flyweight.GrossIncomeFlyweight">
-    <Position X="7.75" Y="4.25" Width="2" />
+    <Position X="5.5" Y="4.25" Width="2" />
     <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="3.75" Y="5.353" />
         <Point X="3.75" Y="5.783" />
-        <Point X="8.75" Y="5.783" />
-        <Point X="8.75" Y="5.483" />
+        <Point X="6.5" Y="5.783" />
+        <Point X="6.5" Y="5.483" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -76,13 +76,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_Flyweight.PremiumsFlyweight">
-    <Position X="5.5" Y="4.25" Width="2" />
+    <Position X="7.75" Y="4.25" Width="2" />
     <InheritanceLine Type="Pattern_Flyweight.PayrollProcessFlyweight" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="3.75" Y="5.353" />
         <Point X="3.75" Y="5.783" />
-        <Point X="6.5" Y="5.783" />
-        <Point X="6.5" Y="5.483" />
+        <Point X="8.75" Y="5.783" />
+        <Point X="8.75" Y="5.483" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
