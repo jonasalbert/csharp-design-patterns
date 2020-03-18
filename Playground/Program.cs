@@ -95,7 +95,7 @@ namespace Playground
             doMainMenu();
 
         }
-
+            
         //PATTERN: Flyweight
         //________________________________________________________________________________
         private static void doFlyweightPattern()

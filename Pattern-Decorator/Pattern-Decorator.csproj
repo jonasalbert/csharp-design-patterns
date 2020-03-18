@@ -5,8 +5,4 @@
     <RootNamespace>Pattern_Decorator</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Uml\" />
-  </ItemGroup>
-
 </Project>

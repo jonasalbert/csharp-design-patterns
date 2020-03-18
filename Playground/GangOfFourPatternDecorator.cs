@@ -81,7 +81,6 @@ namespace Playground
     /// The 'Decorator' abstract class
     /// </summary>
     abstract class Decorator : LibraryItem
-
     {
         protected LibraryItem libraryItem;
 
