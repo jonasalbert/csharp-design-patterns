@@ -5,8 +5,4 @@
     <RootNamespace>Pattern_Bridge</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Uml\" />
-  </ItemGroup>
-
 </Project>

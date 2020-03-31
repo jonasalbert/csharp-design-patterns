@@ -1,28 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Abstraction">
+    <Position X="0.979" Y="0.5" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="RefinedAbstraction">
+    <Position X="3" Y="0.5" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="Implementor">
+    <Position X="5.479" Y="0.5" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="ConcreteImplementor">
+    <Position X="7.531" Y="0.5" Height="0.343" Width="1.582" />
+  </Comment>
   <Class Name="Playground.CustomersBase">
-    <Position X="4.5" Y="1" Width="1.5" />
+    <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QgKAAAAAAAAAAAAAAAAAAAAAAAEkABgAAAAAAAAAAAA=</HashCode>
       <FileName>GangOfFourPatternBridge.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.Customers">
-    <Position X="6.5" Y="1" Width="1.5" />
+    <Position X="3" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GangOfFourPatternBridge.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.DataObject">
-    <Position X="0.5" Y="1" Width="1.5" />
+    <Position X="5.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAgAAAAAAAAAAAAAAAAAAAABABAADAAAAAAAA=</HashCode>
       <FileName>GangOfFourPatternBridge.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.CustomersData">
-    <Position X="2.5" Y="1" Width="1.5" />
+    <Position X="7.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAgAAAAAAAAAAAAAAAAAAAAFABAADABAAAAAA=</HashCode>
       <FileName>GangOfFourPatternBridge.cs</FileName>

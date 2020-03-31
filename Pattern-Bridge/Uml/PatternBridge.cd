@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Abstraction">
+    <Position X="2.021" Y="3.536" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="RefinedAbstraction">
+    <Position X="4.482" Y="3.533" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="ConcreteImplementor">
+    <Position X="12.28" Y="3.25" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="ConcreteImplementor (Generic)">
+    <Position X="9.732" Y="3.246" Height="0.343" Width="2.018" />
+  </Comment>
+  <Comment CommentText="Implementor (Generic)">
+    <Position X="7.297" Y="3.529" Height="0.343" Width="1.582" />
+  </Comment>
+  <Class Name="Pattern_Bridge.BaseEntity">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.Action">
+    <Position X="4" Y="0.5" Width="1.75" />
+    <InheritanceLine Type="Pattern_Bridge.BaseEntity" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.688" Y="1.603" />
+        <Point X="2.688" Y="2.443" />
+        <Point X="4.875" Y="2.443" />
+        <Point X="4.875" Y="1.925" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.Location">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Pattern_Bridge.BaseEntity" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.688" Y="1.603" />
+        <Point X="2.688" Y="2.436" />
+        <Point X="6.75" Y="2.436" />
+        <Point X="6.75" Y="1.925" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.Employee">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Pattern_Bridge.BaseEntity" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.688" Y="1.603" />
+        <Point X="2.688" Y="2.427" />
+        <Point X="8.438" Y="2.427" />
+        <Point X="8.438" Y="2.117" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.Repository&lt;TEntity&gt;">
+    <Position X="9.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgKACAAAAAAAAAAAAACAAAAAAAEEAEAAQAAABAAAAAI=</HashCode>
+      <FileName>Repository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.338" />
+  </Class>
+  <Class Name="Pattern_Bridge.RepositoryEmployee">
+    <Position X="12.25" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.EmployeeBase">
+    <Position X="2" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgKAAAAABAAAAAAAAAAAAAAAAAEEAFAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmployeeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.Employees">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Employees.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.RepositoryLocation">
+    <Position X="12.25" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RepositoryLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.LocationBase">
+    <Position X="2" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgKAAAAABAAAAAAAAAAAAAAAAAEEAFAAAAAAAAAAAAA=</HashCode>
+      <FileName>LocationBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Bridge.Locations">
+    <Position X="4.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Locations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Pattern_Bridge.IRepository&lt;TEntity&gt;">
+    <Position X="7.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgKAAAAAAAAAAAAAAACAAAAAAAEEAEAAAAAAAAAAAAI=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Pattern_Bridge;
 using Pattern_Decorator;
 using Pattern_Flyweight;
 using Pattern_State;
@@ -234,7 +235,7 @@ namespace Playground
             
             Permissions permission = new Permissions();
             permission.Add("Bjarne Stroustrup", 210);
-            //permission.Add("Yukihiro matsumoto", 210);
+            //permission.Add("Yukihiro Matsumoto", 210);
             permission.Display();
 
             // Sync the approval to different locations.
@@ -258,7 +259,7 @@ namespace Playground
             Console.WriteLine("      Samples - Bridge Pattern");
             Console.WriteLine("**********************************");
             Console.WriteLine("1. Record Navigation");
-            Console.WriteLine("2. ");
+            Console.WriteLine("2. Record Navigation (Generic)");
             Console.WriteLine("**********************************");
             Console.Write("select a sample: ");
             int menu = int.Parse(Console.ReadLine());
@@ -293,7 +294,30 @@ namespace Playground
         {
             Console.Clear();
 
+            // Exercise the bridge: Employee
+            Employees employees = new Employees();
+            employees.Data = new RepositoryEmployee();            
+            employees.Show();
+            employees.Next();
+            employees.Show();
+            employees.Next();
+            employees.Show();
+            employees.Add(new Employee() { Id = Guid.NewGuid(), FirstName="John", LastName="Doe", MiddleName="" });
+            employees.ShowAll();
 
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // Exercise the bridge: Employee
+            Locations locations = new Locations();
+            locations.Data = new RepositoryLocation();
+            locations.Show();
+            locations.Next();
+            locations.Show();
+            locations.Next();
+            locations.Show();
+            locations.Add(new Location() { Id = Guid.NewGuid(), Name="CDO", Prime=11 } );
+            locations.ShowAll();
 
             Console.ReadKey();
             doMainMenu();
