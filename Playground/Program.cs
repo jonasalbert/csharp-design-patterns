@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Pattern_Decorator;
 using Pattern_Flyweight;
 using Pattern_State;
 using static Pattern_Flyweight.PayrollProcessFactory;
@@ -19,10 +20,10 @@ namespace Playground
             Console.WriteLine("**********************************");
             Console.WriteLine("        DESIGN PATTERNS");
             Console.WriteLine("**********************************");
-            Console.WriteLine("1. State Pattern");
-            Console.WriteLine("2. Flyweight Pattern");
-            Console.WriteLine("3. Bridge Pattern");
-            Console.WriteLine("4. Decorator Pattern");
+            Console.WriteLine("1. Bridge Pattern");
+            Console.WriteLine("2. Decorator Pattern");
+            Console.WriteLine("3. Flyweight Pattern");
+            Console.WriteLine("4. State Pattern");
             Console.WriteLine("0. EXIT");
             Console.WriteLine("**********************************");
             Console.Write("select a demo (1 to 4): ");
@@ -35,16 +36,16 @@ namespace Playground
                     Environment.Exit(0);
                     break;
                 case 1:
-                    doStatePattern();   
+                    doBridgePattern();                    
                     break;
                 case 2:
-                    doFlyweightPattern();
+                    doDecoratorPattern();                    
                     break;
                 case 3:
-                    doBridgePattern();
+                    doFlyweightPattern();
                     break;
                 case 4:
-                    doDecoratorPattern();
+                    doStatePattern();                    
                     break;
                 default:
                     doMainMenu();
@@ -87,7 +88,7 @@ namespace Playground
         {
             Console.Clear();
             Approval approval = new Approval(210);
-            foreach(ModelApprover approver in DataApprover.Instance.List)
+            foreach(ModelApprover approver in CollectionApprover.Instance.List)
             {
                 approval.TakeAction(approver);
             }
@@ -145,7 +146,7 @@ namespace Playground
             Console.Clear();
 
             PayrollProcessFactory factory = new PayrollProcessFactory();
-            foreach (ModelApprover employee in DataApprover.Instance.List)
+            foreach (ModelApprover employee in CollectionApprover.Instance.List)
             {
                 Console.WriteLine("______________________________________________________________");
 
@@ -185,16 +186,16 @@ namespace Playground
         {
             Console.Clear();
             Console.WriteLine("**********************************");
-            Console.WriteLine("      Samples - Decorator Pattern");
+            Console.WriteLine("   Samples - Decorator Pattern");
             Console.WriteLine("**********************************");
             Console.WriteLine("1. Library System");
-            Console.WriteLine("2. ");
+            Console.WriteLine("2. Prime - Synchronization");
             Console.WriteLine("**********************************");
             Console.Write("select a sample: ");
             int menu = int.Parse(Console.ReadLine());
 
             if (menu.Equals(1)) decoratorPatternLibrarySystem();
-            else if (menu.Equals(2)) decoratorPattern();
+            else if (menu.Equals(2)) decoratorPatternPrimeSync();
         }
         private static void decoratorPatternLibrarySystem()
         {
@@ -220,11 +221,29 @@ namespace Playground
             Console.ReadKey();
             doMainMenu();
         }
-        private static void decoratorPattern()
+        private static void decoratorPatternPrimeSync()
         {
             Console.Clear();
 
+            Approvals approval = new Approvals();
+            approval.Add("John Doe", 210);
+            approval.Add("Jane Doe", 210);
+            approval.Display();
 
+            Console.WriteLine("");
+            
+            Permissions permission = new Permissions();
+            permission.Add("Bjarne Stroustrup", 210);
+            //permission.Add("Yukihiro matsumoto", 210);
+            permission.Display();
+
+            // Sync the approval to different locations.
+            Synchronizable synchronize = new Synchronizable(approval);
+            synchronize.Sync();
+
+            // Sync the permission to different locations.
+            synchronize = new Synchronizable(permission);
+            synchronize.Sync();
 
             Console.ReadKey();
             doMainMenu();

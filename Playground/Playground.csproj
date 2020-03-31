@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pattern-Bridge\Pattern-Bridge.csproj" />
+    <ProjectReference Include="..\Pattern-Decorator\Pattern-Decorator.csproj" />
     <ProjectReference Include="..\Pattern-Flyweight\Pattern-Flyweight.csproj" />
     <ProjectReference Include="..\Pattern-State\Pattern-State.csproj" />
   </ItemGroup>

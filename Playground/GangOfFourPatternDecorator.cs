@@ -10,6 +10,7 @@ namespace Playground
     /// </summary>
     abstract class LibraryItem
     {
+        
         private int _numCopies;
 
         // Property

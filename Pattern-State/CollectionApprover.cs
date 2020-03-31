@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Pattern_State
 {
-    public class DataApprover
+    public class CollectionApprover
     {
-        private static DataApprover _instance=null;
+        private static CollectionApprover _instance=null;
         private List<ModelApprover> _list = null;
-        private DataApprover() { }
+        private CollectionApprover() { }
 
-        public static DataApprover Instance
+        public static CollectionApprover Instance
         {
             get
             {
-                if (_instance == null) _instance = new DataApprover();
+                if (_instance == null) _instance = new CollectionApprover();
                 return _instance;
             }
         }

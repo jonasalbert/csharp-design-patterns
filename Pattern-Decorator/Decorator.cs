@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Pattern_Decorator
 {
-    public abstract class Decorator : SyncItem
+    public abstract class Decorator : PrimeItem
     {
-        protected SyncItem _componentDataSync;
+        protected PrimeItem _primeItem;
 
-        public Decorator(SyncItem componentDataSync)
+        public Decorator(PrimeItem primeItem)
         {
-            this._componentDataSync = componentDataSync;
+            this._primeItem = primeItem;
         }
 
-        public override void Sync(int prime)
+        public override void Display()
         {
         }
     }

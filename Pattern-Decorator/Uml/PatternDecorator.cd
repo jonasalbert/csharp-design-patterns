@@ -4,66 +4,70 @@
     <Position X="5.477" Y="0.974" Height="0.343" Width="1.7" />
   </Comment>
   <Comment CommentText="ConcreteComponent   ">
-    <Position X="7.75" Y="0.974" Height="0.343" Width="1.7" />
+    <Position X="7.75" Y="1" Height="0.343" Width="1.7" />
   </Comment>
   <Comment CommentText="ConcreteComponent   ">
-    <Position X="10.274" Y="0.962" Height="0.343" Width="1.7" />
+    <Position X="10.274" Y="0.988" Height="0.343" Width="1.7" />
   </Comment>
   <Comment CommentText="Decorator">
     <Position X="3.493" Y="0.974" Height="0.343" Width="1.582" />
   </Comment>
   <Comment CommentText="ConcreteDecorator   ">
-    <Position X="0.786" Y="0.975" Height="0.343" Width="1.582" />
+    <Position X="1.25" Y="1.016" Height="0.343" Width="1.582" />
   </Comment>
-  <Class Name="Pattern_Decorator.ApprovalHierarchy">
-    <Position X="10.25" Y="1.5" Width="2" />
-    <InheritanceLine Type="Pattern_Decorator.SyncItem" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6.312" Y="3.507" />
-        <Point X="6.312" Y="3.882" />
-        <Point X="11.292" Y="3.882" />
-        <Point X="11.292" Y="2.733" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ApprovalHierarchy.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Pattern_Decorator.DataStaging">
+  <Class Name="Pattern_Decorator.Approvals">
     <Position X="7.75" Y="1.5" Width="2" />
-    <InheritanceLine Type="Pattern_Decorator.SyncItem" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6.312" Y="3.507" />
-        <Point X="6.312" Y="3.882" />
-        <Point X="8.7" Y="3.882" />
-        <Point X="8.7" Y="2.733" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DataStaging.cs</FileName>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Approvals.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Pattern_Decorator.SyncItem">
+  <Class Name="Pattern_Decorator.Permissions">
+    <Position X="10.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Permissions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Decorator.PrimeItem">
     <Position X="5.5" Y="1.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SyncItem.cs</FileName>
+      <HashCode>CQAAYAAAAAAEAAAAAAAAAQQAAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>PrimeItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_Decorator.Decorator">
     <Position X="3.5" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Pattern_Decorator.PrimeItem" FixedFromPoint="true">
+      <Path>
+        <Point X="5.5" Y="2.284" />
+        <Point X="5" Y="2.284" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Decorator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Pattern_Decorator.DataSync">
-    <Position X="0.75" Y="1.5" Width="2.25" />
+  <Class Name="Pattern_Decorator.Synchronizable">
+    <Position X="1" Y="1.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DataSync.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAACQAAAAAQAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Synchronizable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Decorator.ModelLocation">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIABAIAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelLocation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_Decorator.CollectionLocation">
+    <Position X="9.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAI=</HashCode>
+      <FileName>CollectionLocation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

@@ -1,58 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Pattern_State.Approval">
-    <Position X="0.5" Y="0.75" Width="1.5" />
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAQAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Approval.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.State">
-    <Position X="2.25" Y="0.75" Width="1.75" />
+    <Position X="2.25" Y="0.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>KQAAQAAAAAAEAAAAAAACAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>State.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.StartedState">
-    <Position X="4.25" Y="0.5" Width="2" />
-    <InheritanceLine Type="Pattern_State.State" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="7" Y="0.5" Width="2.25" />
+    <InheritanceLine Type="Pattern_State.BaseState" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4" Y="2.875" />
-        <Point X="5.25" Y="2.875" />
-        <Point X="5.25" Y="2.31" />
+        <Point X="5.375" Y="2.117" />
+        <Point X="5.375" Y="2.492" />
+        <Point X="7.984" Y="2.492" />
+        <Point X="7.984" Y="2.117" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAgQAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StartedState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.OnGoingState">
-    <Position X="6.5" Y="0.5" Width="2.25" />
-    <InheritanceLine Type="Pattern_State.State" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="9.5" Y="0.5" Width="2.25" />
+    <InheritanceLine Type="Pattern_State.BaseState" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4" Y="2.875" />
-        <Point X="7.531" Y="2.875" />
-        <Point X="7.531" Y="2.502" />
+        <Point X="5.375" Y="2.117" />
+        <Point X="5.375" Y="2.492" />
+        <Point X="10.625" Y="2.492" />
+        <Point X="10.625" Y="2.117" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAgQAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>OnGoingState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Pattern_State.CompletedState">
-    <Position X="9" Y="0.5" Width="2.5" />
-    <InheritanceLine Type="Pattern_State.State" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="12" Y="0.5" Width="2.5" />
+    <InheritanceLine Type="Pattern_State.BaseState" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4" Y="2.875" />
-        <Point X="10.25" Y="2.875" />
-        <Point X="10.25" Y="2.502" />
+        <Point X="5.375" Y="2.117" />
+        <Point X="5.375" Y="2.492" />
+        <Point X="13.25" Y="2.492" />
+        <Point X="13.25" Y="2.117" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAgQAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CompletedState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -63,11 +66,18 @@
       <FileName>ModelApprover.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Pattern_State.DataApprover">
+  <Class Name="Pattern_State.CollectionApprover">
     <Position X="7.25" Y="3.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAI=</HashCode>
-      <FileName>DataApprover.cs</FileName>
+      <FileName>CollectionApprover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pattern_State.BaseState">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>BaseState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

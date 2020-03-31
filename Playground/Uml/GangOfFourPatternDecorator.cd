@@ -1,20 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="ConcreteDecorator   ">
+    <Position X="1.927" Y="0.896" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="Decorator">
+    <Position X="3.984" Y="0.911" Height="0.343" Width="1.582" />
+  </Comment>
+  <Comment CommentText="Component">
+    <Position X="5.968" Y="0.911" Height="0.343" Width="1.7" />
+  </Comment>
+  <Comment CommentText="ConcreteComponent   ">
+    <Position X="10.005" Y="0.883" Height="0.343" Width="1.7" />
+  </Comment>
+  <Comment CommentText="ConcreteComponent   ">
+    <Position X="7.988" Y="0.895" Height="0.343" Width="1.7" />
+  </Comment>
   <Class Name="Playground.LibraryItem">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAACA=</HashCode>
       <FileName>GangOfFourPatternDecorator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.Book">
-    <Position X="6.75" Y="0.5" Width="1.5" />
-    <InheritanceLine Type="Playground.LibraryItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Playground.LibraryItem" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.438" Y="2.507" />
-        <Point X="5.438" Y="2.944" />
-        <Point X="7.5" Y="2.944" />
-        <Point X="7.5" Y="2.569" />
+        <Point X="6.688" Y="3.507" />
+        <Point X="6.688" Y="4.136" />
+        <Point X="8.75" Y="4.136" />
+        <Point X="8.75" Y="3.569" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -23,13 +38,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.Video">
-    <Position X="8.75" Y="0.5" Width="1.5" />
-    <InheritanceLine Type="Playground.LibraryItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Playground.LibraryItem" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.438" Y="2.507" />
-        <Point X="5.438" Y="2.944" />
-        <Point X="9.5" Y="2.944" />
-        <Point X="9.5" Y="2.761" />
+        <Point X="6.688" Y="3.507" />
+        <Point X="6.688" Y="4.136" />
+        <Point X="10.688" Y="4.136" />
+        <Point X="10.688" Y="3.761" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -38,11 +53,11 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.Decorator">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Position X="4" Y="1.5" Width="1.5" />
     <InheritanceLine Type="Playground.LibraryItem" FixedToPoint="true">
       <Path>
-        <Point X="4.75" Y="1.562" />
-        <Point X="4.25" Y="1.562" />
+        <Point X="6" Y="2.562" />
+        <Point X="5.5" Y="2.562" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -51,11 +66,11 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Playground.Borrowable">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Position X="2" Y="1.5" Width="1.5" />
     <InheritanceLine Type="Playground.Decorator" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="2.75" Y="1.562" />
-        <Point X="2.25" Y="1.562" />
+        <Point X="4" Y="2.562" />
+        <Point X="3.5" Y="2.562" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>

@@ -29,5 +29,7 @@ namespace Pattern_State
 
         public abstract void TakeAction(ModelApprover prime);
 
+
+
     }
 }
